@@ -60,6 +60,7 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public Account withdrawAmount(int accountNumber, int amount) throws InsufficientBalanceException, InvalidAccountNumberException {
 		Account account=accountRepository.searchAccount(accountNumber);
+		System.out.println("exception added");
 		if(null==account){
 			throw new InvalidAccountNumberException();
 		}
